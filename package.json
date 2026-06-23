@@ -1,5 +1,4 @@
 {
-{
   "name": "6-ascii-moon-frontend",
   "private": true,
   "version": "0.0.0",
@@ -12,7 +11,6 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
-  }
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
