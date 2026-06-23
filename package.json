@@ -1,3 +1,4 @@
+
 {
   "name": "6-ascii-moon-frontend",
   "private": true,
@@ -5,9 +6,12 @@
   "type": "module",
   "engines": {
     "node": "22.x"
-    "pnpm": {
-  "onlyBuiltDependencies": ["esbuild", "sharp"]
-},
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp"
+    ]
   },
   "scripts": {
     "dev": "vite",
