@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Geist Pixel';
+  src: url('../node_modules/geist/dist/fonts/geist-pixel/GeistPixel-Line.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    /* Blue-Black-White theme palette */
+    --bg-deep: #06080f;
+    --bg-base: #0a0e1a;
+    --bg-card: #0f1525;
+    --bg-surface: #131a2d;
+    --blue-primary: #4a7fb5;
+    --blue-light: #6b9cc9;
+    --blue-muted: #3d6b99;
+    --blue-accent: #5b8ec2;
+    --blue-dark: #2d4d70;
+    --text-primary: #e8ecf2;
+    --text-secondary: #94a3b8;
+    --text-tertiary: #64748b;
+    --border-color: rgba(74, 127, 181, 0.15);
+    --border-hover: rgba(74, 127, 181, 0.3);
+    --glow: rgba(74, 127, 181, 0.08);
+
+    --background: 222 40% 5%;
+    --foreground: 210 30% 93%;
+    --card: 222 35% 8%;
+    --card-foreground: 210 30% 93%;
+    --popover: 222 35% 8%;
+    --popover-foreground: 210 30% 93%;
+    --primary: 210 50% 50%;
+    --primary-foreground: 210 30% 93%;
+    --secondary: 222 30% 12%;
+    --secondary-foreground: 210 30% 93%;
+    --muted: 222 25% 15%;
+    --muted-foreground: 215 15% 55%;
+    --accent: 210 50% 50%;
+    --accent-foreground: 210 30% 93%;
+    --destructive: 0 60% 50%;
+    --destructive-foreground: 210 30% 93%;
+    --border: 215 30% 20%;
+    --input: 222 25% 15%;
+    --ring: 210 50% 50%;
+    --radius: 0px;
+  }
+
+  body {
+    font-family: 'IBM Plex Mono', monospace;
+    background: var(--bg-deep);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@keyframes blur-text {
+  0% { filter: blur(0px); }
+  100% { filter: blur(4px); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .facilities-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .facilities-grid > div {
+    border-right: none !important;
+    border-bottom: 1px solid var(--border-color);
+  }
+  .facilities-grid > div:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Gradient transition between sections */
+.gradient-transition {
+  background: linear-gradient(
+    180deg,
+    var(--bg-deep) 0%,
+    var(--bg-base) 30%,
+    var(--bg-card) 70%,
+    var(--bg-base) 100%
+  );
+}
+
+/* Blue glow effect */
+.glow-blue {
+  box-shadow: 0 0 40px rgba(74, 127, 181, 0.08), 0 0 80px rgba(74, 127, 181, 0.04);
+}
+
+.text-gradient-blue {
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--blue-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
