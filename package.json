@@ -5,6 +5,9 @@
   "type": "module",
   "engines": {
     "node": "22.x"
+    "pnpm": {
+  "onlyBuiltDependencies": ["esbuild", "sharp"]
+},
   },
   "scripts": {
     "dev": "vite",
